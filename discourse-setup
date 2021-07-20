@@ -157,7 +157,7 @@ check_linux_memory() {
   ## make an exception and allow those with more
   ## than 989MB
   mem=`free -m --si | awk ' /Mem:/ {print $2}'`
-  if [ "$mem" -ge 990 -a "$mem" -lt 1000 ]; then
+  if [ "$mem" -ge 1 -a "$mem" -lt 1000 ]; then
     echo 1
   else
     echo `free -g --si | awk ' /Mem:/  {print $2} '`
